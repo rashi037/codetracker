@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title>Popup</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<div id="maincontent">
+    <button id="button">Popup</button>
+</div>
+<div id="overlay"></div>
+<div id="popup">
+    <div class="popupcontrols">
+        <span id="popupclose">X</span>
+    </div>
+    <div class="popupcontent">
+		<h2>Choose your Avatar</h2>
+		<img src="a1.jpeg" alt="Avatar" class="avatar">
+		<img src="a2.jpeg" alt="Avatar" class="avatar">
+		<img src="a3.jpeg" alt="Avatar" class="avatar">
+		<img src="a4.jpeg" alt="Avatar" class="avatar">
+    </div>
+</div>
+<script type="text/javascript">
+	// Initialize Variables
+	var closePopup = document.getElementById("popupclose");
+	var overlay = document.getElementById("overlay");
+	var popup = document.getElementById("popup");
+	var button = document.getElementById("button");
+	// Close Popup Event
+	closePopup.onclick = function() {
+	  overlay.style.display = 'none';
+	  popup.style.display = 'none';
+	};
+	// Show Overlay and Popup
+	button.onclick = function() {
+	  overlay.style.display = 'block';
+	  popup.style.display = 'block';
+	}
+</script>
+</body>
+</html>
